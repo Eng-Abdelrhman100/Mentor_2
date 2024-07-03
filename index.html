@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Mentor | #2</title>
-  <script src="https://cdn.tailwindcss.com"></script>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mentor | #2</title>
+    <script src="https://cdn.tailwindcss.com"></script>
     <link
       href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
       rel="stylesheet"
@@ -14,11 +14,17 @@
       tailwind.config = {
         theme: {
           extend: {
-            colors: {
-              clifford: "#da373d",
+            boxShadow: {
+              custom: "8px 8px 0px 0px #000000",
             },
           },
         },
+        variants: {
+          extend: {
+            boxShadow: ["hover"],
+          },
+        },
+        plugins: [],
       };
     </script>
     <style type="text/tailwindcss">
@@ -27,25 +33,38 @@
           content-visibility: auto;
         }
       }
-      .bshadow{
-        box-shadow: 8px 8px 0px 0px 
-      }
+      
     </style>
-</head>
-<body class="bg-[#f4d04e]">
-    <div class="hover:bshadow mx-auto my-[219.5px] bg-white  border-[1px] border-black w-[379px] p-[24px] rounded-[20px]">
-      <img src="assets/images/illustration-article.svg" alt="wow" width="331" height="200" class="rounded-[10px] object-contain">
-      <div class="flex flex-col ">
-        <span class="py-[4px] px-[14px] rounded-[4px] text-black bg-[#f4d04e] rounded-[4px] mt-[24px] mb-[12px] w-[82px] text-center font-extrabold text-[13px]">Learning</span>
+  </head>
+  <body class="bg-[#f4d04e]">
+    <div
+      class="transition-shadow duration-300 hover:shadow-custom mx-auto my-[219.5px] bg-white border-[1px] border-black w-[379px] p-[24px] rounded-[20px]"
+    >
+      <img
+        src="assets/images/illustration-article.svg"
+        alt="wow"
+        width="331"
+        height="200"
+        class="rounded-[10px] object-contain"
+      />
+      <div class="flex flex-col">
+        <span
+          class="py-[4px] px-[14px] rounded-[4px] text-black bg-[#f4d04e] rounded-[4px] mt-[24px] mb-[12px] w-[82px] text-center font-extrabold text-[13px]"
+          >Learning</span
+        >
         <p class="font-[500] text-[14px]">Published 21 Dec 2023</p>
-        <h1 class="my-[12px] text-[24px] font-extrabold"> HTML & CSS foundations</h1>
-        <p class="text-[#808080] text-[15px] font-[500]">These languages are the backbone of every website, defining structure, content, and presentation</p>
+        <h1 class="my-[12px] text-[24px] font-extrabold">
+          HTML & CSS foundations
+        </h1>
+        <p class="text-[#808080] text-[15px] font-[500]">
+          These languages are the backbone of every website, defining structure,
+          content, and presentation
+        </p>
       </div>
       <div class="mt-[24px] flex items-center gap-[12px]">
-        <img src="assets/images/image-avatar.webp" alt="person" width="32">
+        <img src="assets/images/image-avatar.webp" alt="person" width="32" />
         <p class="text-[13px] font-extrabold">Greg Hooper</p>
       </div>
     </div>
-
-</body>
+  </body>
 </html>
